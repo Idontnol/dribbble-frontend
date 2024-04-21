@@ -26,13 +26,15 @@ const Verification=()=>{
             if(result.msg==='success')
             {
                 setShowLoader(false);
+                setVisibleNotification(true);
+                setNotificationMessage({type:"success",message:"user verified successfully"});
                 navigate('/home');
             }
             else{
                 setShowLoader(false);
                 console.log('Error');
                 setVisibleNotification(true);
-                setNotificationMessage('errror in verification');
+                setNotificationMessage({type:"failure",message:"error in verification"});
             }
         }
         verifyUser();

@@ -29,8 +29,8 @@ const InterestSelectionForm=()=>{
       setShowLoader(true);
       const subject="Dribble :Verify your email address";
       const message=`Thanks for signing up for Dribble, the world's leading platform for showcasing and discovering creative work. 
-      We're excited to have you join our community of designers and artists!To activate your account and start exploring Dribble, 
-      please click the verification link below: \n google.com`;
+      We're excited to have you join our community of designers and artists!.\nTo activate your account and start exploring Dribble, 
+      please click the verification link below:`;
       const token=Cookies.get('jwt_token');
 
       const decodedToken = jwtDecode(token);
